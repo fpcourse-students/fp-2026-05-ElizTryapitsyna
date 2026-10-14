@@ -81,7 +81,7 @@ parsePositiveBuggy :: [Int] -> Maybe [Int]
 parsePositiveBuggy xs = Just (filter (> 0) xs)
 
 badInput :: [Int]
-badInput = todo "1.4"
+badInput = [-1, 1]
 
 
 -- 1.5. Вспомните записи.
