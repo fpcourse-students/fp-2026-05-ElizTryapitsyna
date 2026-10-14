@@ -103,4 +103,8 @@ data Task = Task
   deriving (Eq, Show)
 
 startTask :: Task -> Task
-startTask = todo "1.5"
+startTask t = case taskStatus t of
+  Planned -> t { taskStatus = Running, taskAttempts = taskAttempts t + 1 }
+  Running -> t
+  Done -> t
+
