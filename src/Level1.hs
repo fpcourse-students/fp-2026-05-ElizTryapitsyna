@@ -39,10 +39,12 @@ data IntTree = Leaf | Node Int [IntTree]
 sumIntTree :: IntTree -> Int
 sumIntTree t = case t of
   Leaf -> 0
-  Node x children -> todo "1.2 node"
+  Node x children -> x + sumChildren children
 
 sumChildren :: [IntTree] -> Int
-sumChildren = todo "1.2 children"
+sumChildren t = case t of
+  [] -> 0
+  x : rest -> sumIntTree x + sumChildren rest
 
 
 -- 1.3. Все результаты или отказ.
