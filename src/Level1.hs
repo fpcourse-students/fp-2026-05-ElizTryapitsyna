@@ -14,15 +14,15 @@ import MetaUtils (todo)
 
 -- E.leafCount E.tree
 predictedLeaves :: Int
-predictedLeaves = todo "1.1 leaves"
+predictedLeaves = 3
 
 -- E.transform (> 2) E.tree
 predictedMapped :: E.Tree Bool
-predictedMapped = todo "1.1 mapped"
+predictedMapped = E.Node (E.Leaf False) False (E.Node (E.Leaf True) True (E.Leaf True))
 
 -- (E.xs, E.ys, E.zs)
 predictedVersions :: ([Int], [Int], [Int])
-predictedVersions = todo "1.1 versions"
+predictedVersions = ([3, 4], [1, 3, 4], [2, 1, 3, 4])
 
 
 -- 1.2. Дерево с произвольным числом детей.
