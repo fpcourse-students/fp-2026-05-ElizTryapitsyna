@@ -60,7 +60,9 @@ applyMaybeList f xs = case xs of
   [] -> Just []
   x : rest -> case f x of
     Nothing -> Nothing
-    Just y -> todo "1.3"
+    Just y -> case applyMaybeList f rest of
+      Nothing -> Nothing
+      Just ys -> Just (y : ys)
 
 
 -- 1.4. Контрпример вместо объяснения.
